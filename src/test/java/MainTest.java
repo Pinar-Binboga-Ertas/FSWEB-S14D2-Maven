@@ -1,5 +1,4 @@
 import org.example.model.*;
-import org.example.model.enums.LampType;
 import org.example.model.enums.PaintColor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -15,6 +14,8 @@ import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.instanceOf;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.example.model.Lamp;
+
 @ExtendWith(ResultAnalyzer.class)
 public class MainTest {
 
@@ -28,7 +29,7 @@ public class MainTest {
 
     @BeforeEach
     void setUp() {
-        lamp = new Lamp(LampType.NORMAL, true, 80);
+        lamp = new Lamp(LampType, true, 80);
         bed = new Bed("Çift Kişilik", 4, 1, 2, 2);
         wardrobe = new Wardrobe(2, 4, 40);
         carpet = new Carpet(3,5, PaintColor.RED);
